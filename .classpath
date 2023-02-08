@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/selenium-server-4.0.0-beta-4.jar" sourcepath="C:/Users/admin/Documents/Jars/selenium-selenium-4.0.0-beta-4.zip"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/testng-7.4.0.jar" sourcepath="C:/Users/admin/Documents/Jars/testng-6.14.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/testng-7.4.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/common-lang3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/webdrivermanager-3.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/ashot-1.5.4.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_291"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/POI/poi-5.0.0/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/POI/poi-5.0.0/poi-ooxml-full-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/POI/poi-5.0.0/poi-ooxml-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/POI/poi-5.0.0/ooxml-lib/xmlbeans-4.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/POI/poi-5.0.0/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/POI/poi-5.0.0/ooxml-lib/commons-compress-1.20.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/httpcore.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Documents/Jars/httpclient-4.5.13.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
