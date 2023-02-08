@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -41,25 +40,25 @@ public class XLUtils {
 		return cellcount;
 	}
 	
-	public static String getCellData(String xlfile, String xlSheet, int rownum,int colnum) throws IOException {
-		fi = new FileInputStream(xlfile);
-		wb = new XSSFWorkbook(fi);
-		ws = wb.getSheet(xlSheet);
-		row = ws.getRow(rownum);
-		cell=row.getCell(colnum);
-		String data;
-		try {
-		DataFormatter formatter = new DataFormatter();
-		String cellData = formatter.formatCellValue(cell);
-		return cellData;
-		}catch (Exception e) {
-			data="";
-		}
-		
-		wb.close();
-		fi.close();
-		return data;
-	}
+//	public static String getCellData(String xlfile, String xlSheet, int rownum,int colnum) throws IOException {
+//		fi = new FileInputStream(xlfile);
+//		wb = new XSSFWorkbook(fi);
+//		ws = wb.getSheet(xlSheet);
+//		row = ws.getRow(rownum);
+//		cell=row.getCell(colnum);
+//		String data;
+//		try {
+//		DataFormatter formatter = new DataFormatter();
+//		String cellData = formatter.formatCellValue(cell);
+//		return cellData;
+//		}catch (Exception e) {
+//			data="";
+//		}
+//		
+//		wb.close();
+//		fi.close();
+//		return data;
+//	}
 	
 	public static void setCellData(String xlfile, String xlSheet, int rownum,int colnum,String data) throws IOException {
 		fi = new FileInputStream(xlfile);
@@ -69,7 +68,7 @@ public class XLUtils {
 		cell=row.createCell(colnum);
 		cell.setCellValue(data);
 		fo=new FileOutputStream(xlfile);
-		wb.write(fo);
+//		wb.write(fo);
 		wb.close();
 		fi.close();
 		fo.close();
