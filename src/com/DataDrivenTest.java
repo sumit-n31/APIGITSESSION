@@ -14,15 +14,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class DataDrivenTest {
 
-	WebDriver driver;
+	ChromeDriver driver;
 
 	@BeforeMethod
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Documents\\Jars\\New folder (3)\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\admin\\Documents\\Jars\\New folder (3)\\chromedriver.exe");
 //		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -66,33 +65,33 @@ public class DataDrivenTest {
 			}
 
 		}
-		
-		System.out.println(user+"\t"+"\t"+pass+"\t"+exp);
+
+		System.out.println(user + "\t" + "\t" + pass + "\t" + exp);
 	}
 
 	@DataProvider(name = "LoginData")
-	public String[][] getData() throws IOException {
+	public void getData() throws IOException {
 //		String[][] logindata = { 
 //				{ "srn311@gmail.com", "crucia@wc2021", "Invalid" }, 
 //				{ "sr311@gmail.com", "cruca@wc2021", "Invalid" }, 
 //				{ "srn3112@gmail.com", "crucial@wc2021", "valid" },
 //				};
-		String path = "C:\\Users\\admin\\Documents\\Daisy 21\\DatadrivenTest\\Data\\LoginData.xlsx";
-		int row = XLUtils.getRowCount(path, "Sheet1");
-		int colnum = XLUtils.getCellCount(path, "Sheet1",row);
-		System.out.println(row);
-		System.out.println(colnum);
+//		String path = "C:\\Users\\admin\\Documents\\Daisy 21\\DatadrivenTest\\Data\\LoginData.xlsx";
+//		int row = XLUtils.getRowCount(path, "Sheet1");
+//		int colnum = XLUtils.getCellCount(path, "Sheet1", row);
+//		System.out.println(row);
+//		System.out.println(colnum);
 
-		String[][] logindata = new String[row][colnum];
-		for (int i=1; i <= row; i++) {
-			for (int j=0; j < colnum; j++) {
-				logindata[i-1][j] = XLUtils.getCellData(path, "Sheet1", i, j);
-			}
-		}
-
-		return logindata;
+//		String[][] logindata = new String[row][colnum];
+//		for (int i = 1; i <= row; i++) {
+//			for (int j = 0; j < colnum; j++) {
+//				logindata[i - 1][j] = XLUtils.getCellData(path, "Sheet1", i, j);
+//			}
+//		}
+//
+//		return logindata;
 	}
-	
+
 	@AfterMethod
 	public void tearDown() {
 		driver.close();
